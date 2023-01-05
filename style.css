@@ -8,7 +8,7 @@ header {
   background-color: #1c1c1c;
 }
 
-.header-container {
+.grid {
   display: grid;
   grid-template-columns: repeat(24, 30px);
   column-gap: 10px;
@@ -45,14 +45,14 @@ input {
   border-style: solid;
   border-color: rgba(138, 138, 138, 0.149);
   background-color: transparent;
-  color: rgba(138, 138, 138, 0.149);
+  color: white;
   padding: 8px;
 }
 
 .search {
   display: flex;
   grid-column: 17 / 25;
-  width: 100;
+  width: 100%;
   margin-top: 50px;
   height: 30px;
 }
@@ -74,13 +74,6 @@ input {
   background-color: #cdcdcd;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(24, 30px);
-  column-gap: 10px;
-  margin: auto;
-  width: fit-content;
-}
 
 .one {
   display: flex;
@@ -116,6 +109,8 @@ input {
   grid-row: 3;
   background-color: rgb(245, 245, 245);
   text-align: center;
+  font-size: 14px;
+  padding: 1rem;
 }
 
 .box:hover {
@@ -137,12 +132,12 @@ input {
 
 .box-text-first-line {
   color: rgb(47, 178, 235);
-  margin: 16px 16px 0 16px;
+  margin: 16px 0 0 0;
 }
 
 .box-text {
   color: rgb(114, 114, 114);
-  margin: 0px 16px 16px 16px;
+  margin: 0 0 16px 0;
 }
 
 .box > button {
@@ -240,4 +235,66 @@ img {
 footer {
   height: 188px;
   background-color: #1c1c1c;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(10, 30px);
+    column-gap: 0.5vw;
+  }
+
+  .logo {
+    grid-column: 2/10
+  }
+  
+  .search {
+    grid-column: 2 / 10;
+    margin: 20px 0;
+  }
+  
+  .one {
+    grid-column: 2 / 10;
+    grid-row: auto;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 16px;
+  }
+  
+  .two {
+    grid-column: 4 / 9;
+    grid-row: auto;
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .box {
+    margin-top: 16px;
+  }
+  
+  .a, .b, .c, .d {
+    grid-column: 3 / 9;
+    grid-row: auto;
+  }
+  
+  .shadow {
+    grid-row: auto;
+  }
+  
+  .sh-a, .sh-b, .sh-c, .sh-d {
+    grid-column: 3 / 9;
+  }
+  
+  .greybox {
+    grid-column: 2 / 10;
+    grid-row: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  img {
+    grid-column: 1 / 11;
+    grid-row: auto;
+    margin: 45px auto;
+  }
 }
